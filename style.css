@@ -1,0 +1,19 @@
+body{
+    text-align: center;
+    margin: 0 auto;
+}
+table{
+    margin: 0 auto;
+}
+
+hr{
+    width: 50%;
+}
+#test{
+    background-color: #c5c5c5;
+    width: 60%;
+    margin: 0 auto;
+}
+#vendegev{
+    width: 10%;
+}
