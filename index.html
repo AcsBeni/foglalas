@@ -7,50 +7,93 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Panzió - szobafoglalás</h1>
+    <h1 style="font-size: 50px;">Panzió - szobafoglalás</h1>
     <div id="test">
-    <table>
+        <table>
+            <hr>
+            <tr>
+                <th class="th1">Érkezés dátum</th>
+                <th><input type="date" name="" id=""></th>
+            </tr>
+            <tr>
+                <th class="th1">Távozás dátum</th>
+                <th><input type="date" name="" id=""></th>
+            </tr>
+            
+        </table>
         <hr>
-        <tr>
-            <th>Érkezés dátum</th>
-            <th><input type="date" name="" id=""></th>
-        </tr>
-        <tr>
-            <th>Távozás dátum</th>
-            <th><input type="date" name="" id=""></th>
-        </tr>
-        
-    </table>
-    <hr>
-    <table>
-        <tr>
-            <th>Szoba típusa</th>
-            <th>
-                <ol>
-                    <li>Egyágyas - 9.000 Ft/éj</li>
-                    <li>Egyágyas - 9.000 Ft/éj</li>
-                    <li>Egyágyas - 9.000 Ft/éj</li>
-                    <li>Egyágyas - 9.000 Ft/éj</li>
-                </ol>
-            </th>
-        </tr>
-    </table>
-    <hr>
-    <table>
-        <tr>
-            <th>Vendégek száma</th>
-            <th><input type="number" name="" id=""></th>
-        </tr>
-        <tr>
-            <th>Vendégek életkora</th>
-            <th>
-                <input type="text" name="" id="vendegev">év
-                <input type="text" name="" id="vendegev">év
-                <input type="text" name="" id="vendegev">év
-                <input type="text" name="" id="vendegev">év
-            </th>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <th class="th1">Szoba típusa</th>
+                <th>
+                    
+                    <input type="radio" name="Szoba" id="">Egyágyas - 9.000 Ft/éj <br>
+                    <input type="radio" name="Szoba" id="">Kétágyas - 15.000 Ft/éj <br>
+                    <input type="radio" name="Szoba" id="">Kétágyas 1 pótággyal - 18.000 Ft/éj <br>
+                    <input type="radio" name="Szoba" id="">Kétágyas 2 pótággyal - 18.000 Ft/éj <br>
+                    
+                </th>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <th class="th1">Vendégek száma</th>
+                <th>
+                    <select name="number"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>  
+                    </select>fő
+                </th>
+            </tr>
+            <tr>
+                <th class="th1">Vendégek életkora</th>
+                <th>
+                    <input type="text" name="" id="vendegev">év
+                    
+                </th>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <th class="th1">Ellátás</th>
+                <th>
+                    
+                    <input type="radio" name="Ellatas" id="">Reggeli - 900 Ft/nap/fő <br>
+                    <input type="radio" name="Ellatas" id="">Félpanzió - 2.900 Ft/nap/fő<br>
+                    <input type="radio" name="Ellatas" id="">Teljes panzió - 4.900 Ft/nap/fő <br>
+                    
+                    
+                </th>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <th class="th1">Fürdő szolgáltatások</th>
+                <th>
+                    
+                    <input type="radio" name="Furdo" id="">Beltéri medencék - 800 Ft/nap/fő <br>
+                    <input type="radio" name="Furdo" id="">Kültéri medencék - 800 Ft/nap/fő <br>
+                    <input type="radio" name="Furdo" id="">Szauna Belépő - 800 Ft/nap/fő <br>
+                    <input type="radio" name="Furdo" id="">Teljes belépő - 2500 Ft/nap/fő <br>
+                    
+                </th>
+            </tr>
+        </table>
+        <hr>
+        <table>
+            <tr>
+                <th class="th1">Egyéb kérdés, kívánság</th>
+                <th>
+                    <input type="text" style="height: 100px; width: 80%;">
+                </th>
+            </tr>
+        </table>
+        <hr>
     </div>
     <button>költségszámítás</button>
     <script src="./java.js"></script>
