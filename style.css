@@ -5,7 +5,7 @@ body{
 table{
     margin: 0 auto;
     text-align: left;
-    width: 70%;
+    width: 40%;
 }
 
 hr{
@@ -13,12 +13,12 @@ hr{
 }
 #test{
     background-color: #c5c5c5;
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     align-items: center;
 }
 #vendegev{
-    width: 2%;
+    width: 40%;
 }
 li{
     list-style: none;
