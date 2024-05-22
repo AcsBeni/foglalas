@@ -23,6 +23,12 @@ hr{
 li{
     list-style: none;
 }
-.th1{
-    width: 35%;
-}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    width: 50%;
+    margin-left: 20%;
+    
+    
+  }

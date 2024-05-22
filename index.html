@@ -9,94 +9,79 @@
 <body>
     <h1 style="font-size: 50px;">Panzió - szobafoglalás</h1>
     <div id="test">
-        <table>
-            <hr>
-            <tr>
-                <th class="th1">Érkezés dátum</th>
-                <th><input type="date" name="" id="Erkezes"></th>
-            </tr>
-            <tr>
-                <th class="th1">Távozás dátum</th>
-                <th><input type="date" name="" id="Tavozas"></th>
-            </tr>
-            
-        </table>
         <hr>
-        <table>
-            <tr>
-                <th class="th1">Szoba típusa</th>
-                <th>
-                    
-                    <input type="radio" name="Szoba" id="">Egyágyas - 9.000 Ft/éj <br>
-                    <input type="radio" name="Szoba" id="">Kétágyas - 15.000 Ft/éj <br>
-                    <input type="radio" name="Szoba" id="">Kétágyas 1 pótággyal - 18.000 Ft/éj <br>
-                    <input type="radio" name="Szoba" id="">Kétágyas 2 pótággyal - 18.000 Ft/éj <br>
-                    
-                </th>
-            </tr>
-        </table>
+        <div class="grid-container">
+            <div>Érkezés dátum</div>
+            <div><input type="date" name="" id="Erkezes"></div>
+            <div>Távozás dátum</div>
+            <div><input type="date" name="" id="Tavozas"></div>
+        </div>
+        
         <hr>
-        <table>
-            <tr>
-                <th class="th1">Vendégek száma</th>
-                <th style="width: 30%;">
-                    <select name="number"> 
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>  
-                    </select>fő
-                </th>
-            </tr>
-            <tr>
-                <th class="th1">Vendégek életkora</th>
-                
-                <td><input type="text" name="" id="vendegev">év</td>
-                <td><input type="text" name="" id="vendegev">év</td>
-                <td><input type="text" name="" id="vendegev">év</td>
-                <td><input type="text" name="" id="vendegev">év</td>
-                    
-                    
-                
-            </tr>
-        </table>
+        
+        <div class="grid-container">
+        
+            <div>
+                Szoba típusa
+            </div>
+            <div>
+                <input type="radio" name="Szoba" id="">Egyágyas - 9.000 Ft/éj <br>
+                <input type="radio" name="Szoba" id="">Kétágyas - 15.000 Ft/éj <br>
+                <input type="radio" name="Szoba" id="">Kétágyas 1 pótággyal - 18.000 Ft/éj <br>
+                <input type="radio" name="Szoba" id="">Kétágyas 2 pótággyal - 18.000 Ft/éj <br>                        
+            </div>
+        </div>
         <hr>
-        <table>
-            <tr>
-                <th class="th1">Ellátás</th>
-                <th>
-                    
-                    <input type="radio" name="Ellatas" id="">Reggeli - 900 Ft/nap/fő <br>
-                    <input type="radio" name="Ellatas" id="">Félpanzió - 2.900 Ft/nap/fő<br>
-                    <input type="radio" name="Ellatas" id="">Teljes panzió - 4.900 Ft/nap/fő <br>
-                    
-                    
-                </th>
-            </tr>
-        </table>
+        <div class="grid-container">
+            <div>Vendégek száma</div>
+            <div>
+                <select name="number"> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>  
+                </select>fő
+            </div>
+            <div>Vendégek életkora</div>
+            <div>
+                <input type="text" name="" id="vendegev">év
+                <input type="text" name="" id="vendegev">év
+                <input type="text" name="" id="vendegev">év
+                <input type="text" name="" id="vendegev">év
+            </div>
+        </div>
+         
         <hr>
-        <table>
-            <tr>
-                <th class="th1">Fürdő szolgáltatások</th>
-                <th>
-                    
-                    <input type="radio" name="Furdo" id="">Beltéri medencék - 800 Ft/nap/fő <br>
-                    <input type="radio" name="Furdo" id="">Kültéri medencék - 800 Ft/nap/fő <br>
-                    <input type="radio" name="Furdo" id="">Szauna Belépő - 800 Ft/nap/fő <br>
-                    <input type="radio" name="Furdo" id="">Teljes belépő - 2500 Ft/nap/fő <br>
-                    
-                </th>
-            </tr>
-        </table>
+        <div class="grid-container">
+            <div>Ellátás</div>
+            <div>
+                <input type="radio" name="Ellatas" id="">Reggeli - 900 Ft/nap/fő <br>
+                <input type="radio" name="Ellatas" id="">Félpanzió - 2.900 Ft/nap/fő<br>
+                <input type="radio" name="Ellatas" id="">Teljes panzió - 4.900 Ft/nap/fő <br>
+            </div>
+        </div>
+        
         <hr>
-        <table>
-            <tr>
-                <th class="th1">Egyéb kérdés, kívánság</th>
-                <th>
-                    <input type="text" style="height: 100px; width: 80%; text-align: left;">
-                </th>
-            </tr>
-        </table>
+        <div class="grid-container">
+            <div>Fürdő szolgáltatások</div>
+            <div>
+                <input type="radio" name="Furdo" id="">Beltéri medencék - 800 Ft/nap/fő <br>
+                <input type="radio" name="Furdo" id="">Kültéri medencék - 800 Ft/nap/fő <br>
+                <input type="radio" name="Furdo" id="">Szauna Belépő - 800 Ft/nap/fő <br>
+                <input type="radio" name="Furdo" id="">Teljes belépő - 2500 Ft/nap/fő <br>
+            </div>
+        </div>
+        
+        <hr>
+        <div class="grid-container">
+            <div>
+                Egyéb kérdés, kívánság
+            </div>
+            <div>
+                <input type="text" style="height: 100px; width: 80%; text-align: left;">
+            </div>
+        </div>
+        
         <hr>
     </div>
     <button>költségszámítás</button>
