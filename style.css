@@ -31,6 +31,8 @@ li{
     
     
     
+    
+    
   }
 
 .elsooszlop{
@@ -39,6 +41,7 @@ li{
 
 .masodikoszlop{
     width: 15rem;
+    
 }
 #ebbeirsz{
     height: 100px;
@@ -48,9 +51,12 @@ li{
 
 @media only screen and (max-width: 1200px) {
     #ebbeirsz{
-        height: 100px;
-        width: 18rem;
         
+        width: 100%;
+        
+    }
+    #test{
+        width: 80%;
     }
     hr{
         width: 30rem;
@@ -58,122 +64,47 @@ li{
     
   }
 
-  @media only screen and (max-width: 1050px) {
-    #ebbeirsz{
-        height: 100px;
-        width: 15rem;
-        
-    }
-    .elsooszlop{
-        width: 8rem;
-        font-size: 0.9em;
-    }
-    
-    .masodikoszlop{
-        width: 15rem;
-        font-size: 0.9em;
-    }
-    .betumeret{
-        font-size: 0.9em;
-        width: 15rem;
-    }
-  
-  }
-  @media only screen and (max-width: 1000px) {
-    
+  @media only screen and (max-width: 970px) {
     #test{
-        
-        width: 60%;
-        
-        
+        width: 90%;
     }
     hr{
-        width: 28rem;
+        width: 30rem;
     }
+    
   }
-  @media only screen and (max-width: 760px) {
-    
-    
+  @media only screen and (max-width: 540px) {
+    h1{
+        font-size: 40px;
+    }
+    .elsooszlop{
+       width: 5rem;
+    }
     hr{
         width: 90%;
     }
-
-    #ebbeirsz{
-        
-        width: 12rem;
-        
-    }
-    .elsooszlop{
-        width: 5rem;
-        font-size: 0.8em;
-    }
-    
     .masodikoszlop{
-        width: 15rem;
-        font-size: 0.8em;
+        width:6rem;
+        
     }
     .betumeret{
-        font-size: 0.8em;
-        width: 15rem;
-    }
-    h1{
-        font-size: 40px;
-    }
-
-  }
-  @media only screen and (max-width: 760px) {
-    
-  
-    #ebbeirsz{
-        
-        width: 10rem;
-        
-    }
-    .elsooszlop{
-       
-        font-size: 0.6em;
-    }
-    
-    .masodikoszlop{
-       
-        font-size: 0.6em;
-    }
-    .betumeret{
-        font-size: 0.6em;
-        width: 15rem;
-    }
-    h1{
-        font-size: 40px;
-    }
-
-  }
-  @media only screen and (max-width: 550px) {
-    
-  
-    #ebbeirsz{
-        
-        width: 8rem;
-        
-    }
-    .elsooszlop{
-        
-        font-size: 0.5em;
-    }
-    
-    .masodikoszlop{
-       
-        font-size: 0.5em;
-    }
-    .betumeret{
-        font-size: 0.5em;
-        
+        width: 6rem;
     }
     .grid-container {
-        column-width: 0px;
-        column-gap: 0.4em;
-        padding: 0px;
-        
-        
-      }
+        width: 10rem;
+    }
+    #Erkezes{
+        width: 7.5rem;
+    }
+    #Tavozas{
+        width: 7.5rem;
+    }
+    #hosszuszo{
+        font-size: 13px;
+    }
 
   }
+
+  
+
+  
