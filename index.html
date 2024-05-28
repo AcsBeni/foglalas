@@ -25,17 +25,17 @@
                 Szoba típusa:
             </div>
             <div class="betumeret">
-                <input type="radio" name="Szoba" id="" >Egyágyas - 9.000 Ft/éj <br>
-                <input type="radio" name="Szoba" id="">Kétágyas - 15.000 Ft/éj <br>
-                <input type="radio" name="Szoba" id="">Kétágyas 1 pótággyal - 18.000 Ft/éj <br>
-                <input type="radio" name="Szoba" id="">Kétágyas 2 pótággyal - 18.000 Ft/éj <br>                        
+                <input type="radio" name="Szoba" id="szoba1" >Egyágyas - 9.000 Ft/éj <br>
+                <input type="radio" name="Szoba" id="szoba2">Kétágyas - 15.000 Ft/éj <br>
+                <input type="radio" name="Szoba" id="szoba3">Kétágyas 1 pótággyal - 18.000 Ft/éj <br>
+                <input type="radio" name="Szoba" id="szoba4">Kétágyas 2 pótággyal - 18.000 Ft/éj <br>                        
             </div>
         </div>
         <hr>
         <div class="grid-container">
             <div class="elsooszlop">Vendégek száma:</div>
             <div class="masodikoszlop">
-                <select name="number"> 
+                <select name="number" id="valasztas"> 
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -44,10 +44,10 @@
             </div>
             <div class="elsooszlop">Vendégek életkora:</div>
             <div class="masodikoszlop">
-                <input type="text" name="" id="vendegev">év
-                <input type="text" name="" id="vendegev">év
-                <input type="text" name="" id="vendegev">év
-                <input type="text" name="" id="vendegev">év
+                <input type="text" name="" id="Ev1" class="vendegev">év
+                <input type="text" name="" id="Ev2" class="vendegev">év
+                <input type="text" name="" id="Ev3" class="vendegev">év
+                <input type="text" name="" id="Ev4" class="vendegev">év
             </div>
         </div>
          
@@ -55,9 +55,9 @@
         <div class="grid-container">
             <div class="elsooszlop">Ellátás:</div>
             <div class="masodikoszlop">
-                <input type="radio" name="Ellatas" id="">Reggeli - 900 Ft/nap/fő <br>
-                <input type="radio" name="Ellatas" id="">Félpanzió - 2.900 Ft/nap/fő<br>
-                <input type="radio" name="Ellatas" id="">Teljes panzió - 4.900 Ft/nap/fő <br>
+                <input type="radio" name="Ellatas" id="Ellatas1">Reggeli - 900 Ft/nap/fő <br>
+                <input type="radio" name="Ellatas" id="Ellatas2">Félpanzió - 2.900 Ft/nap/fő<br>
+                <input type="radio" name="Ellatas" id="Ellatas3">Teljes panzió - 4.900 Ft/nap/fő <br>
             </div>
         </div>
         
@@ -65,10 +65,10 @@
         <div class="grid-container">
             <div class="elsooszlop" id="hosszuszo">Fürdő szolgáltatások:</div>
             <div class="betumeret">
-                <input type="radio" name="Furdo" id="">Beltéri medencék - 800 Ft/nap/fő <br>
-                <input type="radio" name="Furdo" id="">Kültéri medencék - 800 Ft/nap/fő <br>
-                <input type="radio" name="Furdo" id="">Szauna Belépő - 800 Ft/nap/fő <br>
-                <input type="radio" name="Furdo" id="">Teljes belépő - 2500 Ft/nap/fő <br>
+                <input type="radio" name="Furdo" id="Furdo1">Beltéri medencék - 800 Ft/nap/fő <br>
+                <input type="radio" name="Furdo" id="Furdo2">Kültéri medencék - 800 Ft/nap/fő <br>
+                <input type="radio" name="Furdo" id="Furdo3">Szauna Belépő - 800 Ft/nap/fő <br>
+                <input type="radio" name="Furdo" id="Furdo4">Teljes belépő - 2500 Ft/nap/fő <br>
             </div>
         </div>
         
@@ -84,7 +84,7 @@
         
         <hr>
     </div>
-    <button>költségszámítás</button>
+    <button onclick="szamitas()">költségszámítás</button>
     <script src="./java.js"></script>
 </body>
 </html>
