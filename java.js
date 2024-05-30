@@ -1,11 +1,23 @@
 
-let osszeg = 0
+let osszosszeg = 0
 let foosszeg = 0
+let szobaosszeg = 0
+let napok = 0  
+let honap = 0
+let evek = 0
+let szobatipus = ""
+let ellatastipus = ""
+let szolgaltatasok = ""
+
+
 
 let szoba1 = document.getElementById("szoba1")
 let szoba2 = document.getElementById("szoba2")
 let szoba3 = document.getElementById("szoba3")
 let szoba4 = document.getElementById("szoba4")
+
+let erkezesidopont = document.getElementById("Erkezes")
+let tavozasidopont = document.getElementById("Tavozas")
 
 let ellatas1 = document.getElementById("ellatas1")
 let ellatas2 = document.getElementById("ellatas2")
@@ -26,28 +38,60 @@ let furdo4 = document.getElementById("Furdo4")
 let textbox = document.getElementById("ebbeirsz")
 
 function szamitas(){
-    Keres();
-    szobak();
-    Emberek();   
     
-    alert(osszeg)
-    osszeg = 0
+    
+    Idopont();
+    Emberek();    
+    alert(`Kedves Vendégünk \n \n \n
+    Érkezés: ${erkezesidopont.value}\n
+    Távozás: ${tavozasidopont.value}\n
+    Szoba típusa: ${szobatipus}\n
+    Vendégek száma: ${fovalasztas.value}Fő\n
+    Ellátás: ${ellatastipus}\n
+    Igényelt szolgáltasások: ${szolgaltatasok}\n
+    A teljes összeg: ${osszosszeg}`
+
+     )
+    osszosszeg = 0
     foosszeg = 0
+    szobaosszeg = 0
+    napok = 0  
+    honap = 0
+    evek = 0
+    szobatipus =""
+    szolgaltatasok =""
+    ellatastipus = ""
+    textbox.value = ""
+    
 }
 
 
+
+function Idopont(){
+    szobak();
+    evek = erkezesidopont.value[0] -tavozasidopont.value[0]
+    honap = erkezesidopont.value[1] -tavozasidopont.value[1]
+    napok = (erkezesidopont.value[1] -tavozasidopont.value[1])+(honap*30)+(evek*360)
+    szobaosszeg *= napok
+    osszosszeg += szobaosszeg
+}
+
 function szobak(){
     if(szoba1.checked){
-        osszeg+=9000
+        szobaosszeg+=9000
+        szobatipus ="Egyágyas"
     }
     else if(szoba2.checked){
-        osszeg+=15000
+        szobaosszeg+=15000
+        szobatipus ="Kétágyas"
     }
     else if(szoba3.checked){
-        osszeg+=18000
+        szobaosszeg+=18000
+        szobatipus ="Kétágyas 1 pótággyal"
     }
     else if(szoba4.checked){
-        osszeg+=18000
+        szobaosszeg+=18000
+        szobatipus ="Kétágyas 2 pótággyal"
     }
     
     
@@ -56,27 +100,32 @@ function Emberek(){
     Ellatasok();
     Furdok();
 
-    
-    if(fovalasztas.value ==2){
-        osszeg+= foosszeg*2
+    if(fovalasztas.value ==1){
+        osszosszeg+= foosszeg
+    }
+    else if(fovalasztas.value ==2){
+        osszosszeg+= foosszeg*2
     }
     else if(fovalasztas.value ==3){
-        osszeg+= foosszeg*3
+        osszosszeg+= foosszeg*3
     }
     else if(fovalasztas.value ==4){
-        osszeg+= foosszeg*4
+        osszosszeg+= foosszeg*4
     }
 
 }
 function Ellatasok(){
     if(ellatas1.checked){
         foosszeg+=900
+        ellatastipus ="Reggeli"
     }
     else if(ellatas2.checked){
         foosszeg+=2900
+        ellatastipus ="Félpanzió"
     }
     else if(ellatas3.checked){
         foosszeg+=4900
+        ellatastipus ="Teljes panzió"
     }
     
     
@@ -84,22 +133,19 @@ function Ellatasok(){
 function Furdok(){
     if(furdo1.checked){
         foosszeg+=800
+        szolgaltatasok += "Beltéri medencék, "
     }
     if(furdo2.checked){
         foosszeg+=800
+        szolgaltatasok += "Kültéri medencék, "
     }
     if(furdo3.checked){
         foosszeg+=800
+        szolgaltatasok += "Szauna Belépő, "
     }
     if(furdo4.checked){
         foosszeg+=2500
+        szolgaltatasok += "Teljes belépő "
     }
 }
-function Keres(){
-    if(textbox.value == ""){
 
-    }
-    else{
-        alert("https://www.youtube.com/watch?v=dQw4w9WgXcQhttps://www.youtube.com/watch?v=X6NjLP5WaVc")
-    }
-}

@@ -34,7 +34,19 @@ li{
     
     
   }
+#Keresek{
+    margin-top: 25%;
+}
 
+#hosszuszo{
+    margin-top: 15%;
+}
+#szobatext{
+    margin-top: 15%;
+}
+#Ellatastext{
+    margin-top: 8%;
+}
 .elsooszlop{
     width: 10rem;
     
@@ -102,6 +114,18 @@ li{
     }
     #hosszuszo{
         font-size: 13px;
+        margin-top: 120%;
+        margin-right: 0.4rem;
+    }
+
+    #Ellatastext{
+        margin-top: 75%;
+    }
+    #szobatext{
+        margin-top: 95%;
+    }
+    #Keresek{
+        margin-top: 30%;
     }
 
   }
