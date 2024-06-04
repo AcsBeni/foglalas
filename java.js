@@ -58,10 +58,30 @@ function szamitas(){
     napok = 0  
     honap = 0
     evek = 0
+
     szobatipus =""
     szolgaltatasok =""
     ellatastipus = ""
     textbox.value = ""
+
+    erkezesidopont.value = "";
+    tavozasidopont.value = ""
+
+    szoba1.checked = false;
+    szoba2.checked = false;
+    szoba3.checked = false;
+    szoba4.checked = false;
+
+    ellatas1.checked = false;
+    ellatas2.checked = false;
+    ellatas3.checked = false;
+
+    furdo1.checked = false;
+    furdo2.checked = false;
+    furdo3.checked = false;
+    furdo4.checked = false;
+
+    
     
 }
 
