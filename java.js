@@ -10,7 +10,6 @@ let ellatastipus = ""
 let szolgaltatasok = ""
 
 
-
 let szoba1 = document.getElementById("szoba1")
 let szoba2 = document.getElementById("szoba2")
 let szoba3 = document.getElementById("szoba3")
@@ -39,19 +38,22 @@ let textbox = document.getElementById("ebbeirsz")
 
 function szamitas(){
     
-    
-    Idopont();
-    Emberek();    
-    alert(`Kedves Vendégünk \n \n \n
-    Érkezés: ${erkezesidopont.value}\n
-    Távozás: ${tavozasidopont.value}\n
-    Szoba típusa: ${szobatipus}\n
-    Vendégek száma: ${fovalasztas.value}Fő\n
-    Ellátás: ${ellatastipus}\n
-    Igényelt szolgáltasások: ${szolgaltatasok}\n
-    A teljes összeg: ${osszosszeg}`
+    if(erkezesidopont.value < tavozasidopont.value){
+        Idopont();
+        Emberek();    
+        alert(`Kedves Vendégünk \n \n \n
+        Érkezés: ${erkezesidopont.value}\n
+        Távozás: ${tavozasidopont.value}\n
+        Szoba típusa: ${szobatipus}\n 
+        Vendégek száma: ${fovalasztas.value}Fő\n
+        Ellátás: ${ellatastipus}\n
+        Igényelt szolgáltasások: ${szolgaltatasok}\n
+        A teljes összeg: ${osszosszeg}`
 
-     )
+        )
+    }
+    
+    
     osszosszeg = 0
     foosszeg = 0
     szobaosszeg = 0
@@ -89,10 +91,10 @@ function szamitas(){
 
 function Idopont(){
     szobak();
-    evek = erkezesidopont.value[0] -tavozasidopont.value[0]
+    /*evek = erkezesidopont.value[0] -tavozasidopont.value[0]
     honap = erkezesidopont.value[1] -tavozasidopont.value[1]
     napok = (erkezesidopont.value[1] -tavozasidopont.value[1])+(honap*30)+(evek*360)
-    szobaosszeg *= napok
+    szobaosszeg *= napok*/
     osszosszeg += szobaosszeg
 }
 
@@ -106,6 +108,7 @@ function szobak(){
         szobatipus ="Kétágyas"
     }
     else if(szoba3.checked){
+        
         szobaosszeg+=18000
         szobatipus ="Kétágyas 1 pótággyal"
     }
@@ -151,21 +154,25 @@ function Ellatasok(){
     
 }
 function Furdok(){
-    if(furdo1.checked){
-        foosszeg+=800
-        szolgaltatasok += "Beltéri medencék, "
-    }
-    if(furdo2.checked){
-        foosszeg+=800
-        szolgaltatasok += "Kültéri medencék, "
-    }
-    if(furdo3.checked){
-        foosszeg+=800
-        szolgaltatasok += "Szauna Belépő, "
-    }
     if(furdo4.checked){
         foosszeg+=2500
         szolgaltatasok += "Teljes belépő "
     }
+    else{
+        if(furdo1.checked){
+            foosszeg+=800
+            szolgaltatasok += "Beltéri medencék, "
+        }
+        if(furdo2.checked){
+            foosszeg+=800
+            szolgaltatasok += "Kültéri medencék, "
+        }
+        if(furdo3.checked){
+            foosszeg+=800
+            szolgaltatasok += "Szauna Belépő, "
+        }
+    }
+    
+    
 }
 
